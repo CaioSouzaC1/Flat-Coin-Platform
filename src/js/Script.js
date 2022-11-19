@@ -38,3 +38,24 @@ Array.from(document.querySelectorAll(".menu ul li")).map((e) => {
     maybeShowHam();
   });
 });
+
+const modal = document.getElementById("myModal");
+document.getElementsByClassName("close")[0].addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.onclick = (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+const modalContent = document.querySelector("#theModalContent");
+
+function openModal(SingleCrypto) {
+  modal.style.display = "block";
+  modalContent.innerHTML = `<div>${SingleCrypto[1]}</div>
+  <img src="${SingleCrypto[8]}"></img>
+  <div>${SingleCrypto[7]}</div>
+  <a href="${SingleCrypto[9]}"><i class="fa-solid fa-globe"></i></a>`;
+}
