@@ -1,0 +1,7 @@
+* {
+  transition: all 3s;
+}
+.main_container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
