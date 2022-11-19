@@ -13,7 +13,6 @@ function listDeepInfoCrypto($listIds, $coin, $headers)
     $qs = http_build_query($parameters); // query string encode the parameters
     $request = "{$url}?{$qs}"; // create the request URL
 
-
     $curl = curl_init();
     curl_setopt_array($curl, array(
         CURLOPT_URL => $request,            // set the request URL
