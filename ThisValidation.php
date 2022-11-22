@@ -24,9 +24,9 @@ $result = mysqli_query($con, "SELECT * FROM `Supers` WHERE `usuario` = '$user' A
 if (mysqli_num_rows($result) > 0) {
     $_SESSION['login'] = $login;
     $_SESSION['senha'] = $senha;
-    header('location:adm.php');
+    header('location:AdmPainel.php');
 } else {
     unset($_SESSION['login']);
     unset($_SESSION['senha']);
-    header('location:index.php?login=LoginInválido');
+    header('location:AdmIndex.php?login=LoginInválido');
 }

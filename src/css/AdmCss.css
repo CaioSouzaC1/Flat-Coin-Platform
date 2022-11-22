@@ -54,6 +54,18 @@ input::placeholder {
   margin-left: 5px;
   color: black;
 }
+button {
+  border-radius: 41% 59% 39% 61% / 63% 29% 71% 37%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
 @media (max-width: 576px) {
   form {
     width: 80%;
