@@ -24,3 +24,18 @@ function listTrueCoins($start,$limit, $headers){
     $realCoins = json_decode($response);
     return $realCoins;
 }
+
+function listConvertCoins(){
+
+    $headers = [
+        'Accepts: application/json',
+        'X-CMC_PRO_API_KEY: 8cf8663a-adcf-4af0-8656-318a71758cd8'
+    ];
+
+    $realCoins = listTrueCoins(1, 10, $headers);
+    $convertCoin = [];
+    foreach($realCoins->data as $coin){
+        array_push($convertCoin, $coin->symbol);
+    }
+    return $convertCoin;
+}

@@ -43,7 +43,7 @@ function listCtyptosCmc($limit, $headers)
 }
 
 
-function sendInfoToHome()
+function sendInfoToHome($convertCoin)
 {
     $headers = [
         'Accepts: application/json',
@@ -51,15 +51,6 @@ function sendInfoToHome()
     ];
 
     $cryptos = listCtyptosCmc(11, $headers);
-
-
-    $realCoins = listTrueCoins(1, 10, $headers);
-
-    $convertCoin = [];
-    foreach ($realCoins->data as $coin) {
-        array_push($convertCoin, $coin->symbol);
-    }
-    $convertCoin = $convertCoin[rand(0, 9)];
 
     $topCryptoIds = '';
     foreach ($cryptos->data as $cry) {

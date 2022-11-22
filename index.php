@@ -2,7 +2,8 @@
 
 require "ListingAllCryptos.php";
 
-$cryptos = sendInfoToHome();
+$cryptos = sendInfoToHome("USD");
+$coins = listConvertCoins();
 
 ?>
 
@@ -21,6 +22,19 @@ require "header.php";
         </div>
         <div class="menu row pointer">
             <ul>
+                    <li>
+                        <select style="background: transparent; border: transparent;" name="coin" id="coin">
+                            
+                            <?php 
+                            foreach($coins as $convertCoin){ 
+                            ?>
+
+                                <option value=" <?= $convertCoin ?> "> <?= $convertCoin ?> </option>
+
+                            <?php } ?>
+                            
+                        </select>
+                    </li>
                 <li>Top Cryptos</li>
                 <li>Top Cryptos</li>
                 <li>Top Cryptos</li>
@@ -49,6 +63,7 @@ require "header.php";
                     <h1><?= $SingleCrypto[1] ?></h1>
                     <h2>Sigla: <?= $SingleCrypto[2] ?></h2>
                     <a href="<?= $SingleCrypto[9] ?>"><i class="fa-solid fa-globe"></i></a>
+                    <h2>Quotation: <?= $SingleCrypto[4][0] ?></h2>
                 </div>
             </li>
         <?php }
