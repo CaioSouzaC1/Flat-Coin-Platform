@@ -15,8 +15,10 @@ const changeLogo = () => {
     }
   }, 4500);
 };
+
 window.addEventListener("load", () => {
   changeLogo();
+  coinSelect();
 });
 
 const maybeShowHam = () => {
@@ -59,3 +61,16 @@ function openModal(SingleCrypto) {
   <div>${SingleCrypto[7]}</div>
   <a href="${SingleCrypto[9]}"><i class="fa-solid fa-globe"></i></a>`;
 }
+const coinSelect = () => {
+  const select = document.querySelector("#coin");
+  select.addEventListener("change", (event) => {
+    $.ajax({
+      url: "../../index.php",
+      type: "post",
+      data: { param: event.target.value },
+      success: function (response) {
+        console.log(response);
+      },
+    });
+  });
+};

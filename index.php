@@ -22,23 +22,21 @@ require "header.php";
         </div>
         <div class="menu row pointer">
             <ul>
-                    <li>
-                        <select style="background: transparent; border: transparent;" name="coin" id="coin">
-                            
-                            <?php 
-                            foreach($coins as $convertCoin){ 
-                            ?>
-
-                                <option value=" <?= $convertCoin ?> "> <?= $convertCoin ?> </option>
-
-                            <?php } ?>
-                            
-                        </select>
-                    </li>
                 <li>Top Cryptos</li>
                 <li>Top Cryptos</li>
                 <li>Top Cryptos</li>
             </ul>
+            <select id="coin" style="background: transparent; border: transparent;">
+
+                <?php
+                foreach ($coins as $convertCoin) {
+                ?>
+
+                    <option value=" <?= $convertCoin ?> "> <?= $convertCoin ?> </option>
+
+                <?php } ?>
+
+            </select>
             <i id="hamburguer" class="fa-solid fa-bars"></i>
         </div>
     </div>
@@ -73,5 +71,15 @@ require "header.php";
 <?php
 
 require "footer.php";
+
+function funcTest($funcParam)
+{
+    return  $funcParam;
+}
+
+if (isset($_POST['param'])) {
+    funcTest($_POST['param']);
+}
+
 
 ?>
