@@ -51,11 +51,13 @@ require "header.php";
 
 </div>
 <main>
+    <div id="teste"></div>
+
     <ul>
         <?php
         foreach ($cryptos[0] as $SingleCrypto) {
         ?>
-            <li class="Crypto" onclick='openModal(<?= json_encode($SingleCrypto) ?>)'>
+            <!-- <li class="Crypto" onclick='openModal(<?= json_encode($SingleCrypto) ?>)'>
                 <div class="row ai-ce">
                     <img src="<?= $SingleCrypto[8] ?>" alt="<?= $SingleCrypto[1] ?>">
                     <h1><?= $SingleCrypto[1] ?></h1>
@@ -63,7 +65,7 @@ require "header.php";
                     <a href="<?= $SingleCrypto[9] ?>"><i class="fa-solid fa-globe"></i></a>
                     <h2>Quotation: <?= $SingleCrypto[4][0] ?></h2>
                 </div>
-            </li>
+            </li>-->
         <?php }
         ?>
     </ul>

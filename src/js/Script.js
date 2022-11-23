@@ -64,13 +64,36 @@ function openModal(SingleCrypto) {
 const coinSelect = () => {
   const select = document.querySelector("#coin");
   select.addEventListener("change", (event) => {
-    $.ajax({
-      url: "../../index.php",
-      type: "post",
-      data: { param: event.target.value },
-      success: function (response) {
-        console.log(response);
-      },
-    });
+    const withoputSpaces = "coin=" + event.target.value.trim();
+    loadJSON(withoputSpaces);
   });
 };
+
+let $testeDiv = document.querySelector("#teste");
+
+function loadJSON(params) {
+  let myObj,
+    x,
+    htmlResult = "";
+  let url = "FetchPostApi.php";
+  console.log(params);
+  fetch(url, {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+    },
+    body: params,
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      console.log(myJson);
+      myObj = JSON.parse(JSON.stringify(myJson));
+      for (x in myObj) {
+        htmlResult += myObj[x].CoinSelected + "</b><br>";
+      }
+      $testeDiv.innerHTML = htmlResult;
+    });
+}

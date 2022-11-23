@@ -22,11 +22,11 @@ $mail = $_POST['email'];
 $result = mysqli_query($con, "SELECT * FROM `Supers` WHERE `usuario` = '$user' AND `email`= '$mail'");
 
 if (mysqli_num_rows($result) > 0) {
-    $_SESSION['login'] = $login;
-    $_SESSION['senha'] = $senha;
+    $_SESSION['user'] = $user;
+    $_SESSION['mail'] = $mail;
     header('location:AdmPainel.php');
 } else {
-    unset($_SESSION['login']);
-    unset($_SESSION['senha']);
+    unset($_SESSION['user']);
+    unset($_SESSION['mail']);
     header('location:AdmIndex.php?login=LoginInválido');
 }
