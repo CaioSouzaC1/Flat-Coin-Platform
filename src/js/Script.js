@@ -74,11 +74,11 @@ const coinSelect = () => {
 let $testeDiv = document.querySelector("#teste");
 
 function loadJSON(params) {
+  document.querySelector("#loader").classList.remove("invisible");
   let myObj,
     x,
     htmlResult = "";
   let url = "FetchPostApi.php";
-  console.log(params);
   fetch(url, {
     method: "POST",
     headers: {
@@ -91,11 +91,12 @@ function loadJSON(params) {
       return response.json();
     })
     .then(function (myJson) {
-      console.log(myJson);
       myObj = JSON.parse(JSON.stringify(myJson));
+      console.log(myObj);
       for (x in myObj) {
-        htmlResult += myObj[x].CoinSelected + "</b><br>";
+        htmlResult += myObj[x].Price + "</b><br>";
       }
+      document.querySelector("#loader").classList.add("invisible");
       $testeDiv.innerHTML = htmlResult;
     });
 }

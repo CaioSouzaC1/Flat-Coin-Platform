@@ -21,9 +21,10 @@ require "header.php";
             <span>Platform</span>
         </div>
         <div class="menu row pointer">
+
             <ul>
                 <li>Top Cryptos</li>
-                <li>Top Cryptos</li>
+                <li>Newsletter</li>
                 <li>Top Cryptos</li>
             </ul>
             <i id="hamburguer" class="fa-solid fa-bars"></i>
@@ -39,28 +40,37 @@ require "header.php";
     </div>
 
 </div>
-<main>
-    <div class="configs">
-        <h3>Select Coin:</h3>
-        <select id="coin">
-            <?php
-            foreach ($coins as $convertCoin) {
-            ?>
+<main class="main_container">
+    <div class="configs row ai-ce">
+        <div class="row ai-ce col-6 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+            <h3>Select Coin:</h3>
+            <select id="coin">
+                <?php
+                foreach ($coins as $convertCoin) {
+                ?>
 
-                <option value=" <?= $convertCoin ?> "> <?= $convertCoin ?> </option>
+                    <option value=" <?= $convertCoin ?> "> <?= $convertCoin ?> </option>
 
-            <?php } ?>
-        </select>
-        <br>
-        <h3>Variation Time:</h3>
-        <select id="VarTime">
-            <option value="1h">1h</option>
-            <option value="24h">24h</option>
-            <option value="7d">7d</option>
-            <option value="30d">30d</option>
-            <option value="60d">60d</option>
-            <option value="90d">90d</option>
-        </select>
+                <?php } ?>
+            </select>
+        </div>
+        <div class="row ai-ce">
+            <h3>Variation Time:</h3>
+            <select id="VarTime">
+                <option value="1h">1h</option>
+                <option value="24h">24h</option>
+                <option value="7d">7d</option>
+                <option value="30d">30d</option>
+                <option value="60d">60d</option>
+                <option value="90d">90d</option>
+            </select>
+        </div>
+        <div id="loader" class="lds-ring invisible">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <div id="teste"></div>
 
@@ -99,7 +109,7 @@ require "header.php";
         ?>
     </ul>
 </main>
-<section>
+<section id="newsletter">
     <div class="newsletter">
         <h2>Every friday updates about the best cryptocurrencies in your inbox</h2>
         <i class="fa-regular fa-envelope"></i>
