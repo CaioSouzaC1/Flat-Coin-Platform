@@ -4,8 +4,13 @@
 
 body {
   font-family: "Roboto Slab", serif;
-  background-color: #ffffff;
-  background-image: linear-gradient(135deg, #ffffff 0%, #e8f4ff 100%);
+  background-color: #010d18;
+  background-image: linear-gradient(
+    135deg,
+    #010d18 0%,
+    #00182c 90%,
+    #001e38 100%
+  );
   height: auto;
 }
 
@@ -26,7 +31,7 @@ header {
   color: #f7931a;
 }
 .fa-ethereum {
-  color: #051338;
+  color: white;
 }
 
 .fa-solid {
@@ -50,7 +55,7 @@ header {
 .logos span:nth-child(3) {
   margin: 0;
   font-size: 20px;
-  color: #051338;
+  color: #ffffff;
 }
 
 .menu ul {
@@ -58,16 +63,14 @@ header {
 }
 .menu ul li {
   margin: 0 10px;
-}
-
-.menu ul li {
   display: flex;
   flex-direction: column;
+  color: #ffffff;
 }
 
 .menu ul li::after {
   content: "";
-  color: #051338;
+  color: #ffffff;
   height: 3px;
   background-color: #bddefd;
   width: 0%;
@@ -77,7 +80,7 @@ header {
 
 .menu ul li:hover::after {
   content: "";
-  color: #051338;
+  color: #ffffff;
   border-radius: 0 0 40% 0;
   height: 3px;
   background-color: #2f5bd3;
@@ -99,7 +102,15 @@ header {
 footer {
   background-color: #051338;
   background-image: linear-gradient(20deg, #051338 0%, rgb(18, 70, 212) 100%);
-  border-radius: 40% 40% 0 0;
+  clip-path: polygon(
+    50% 0%,
+    83% 12%,
+    100% 12%,
+    100% 100%,
+    0 100%,
+    0 12%,
+    17% 12%
+  );
   padding-top: 5%;
   padding-bottom: 5%;
   margin-top: 2em;
@@ -147,16 +158,148 @@ footer a {
 
 .Crypto {
   width: 90%;
-  background-color: #ffffff;
-  background-image: linear-gradient(135deg, #ffffff 0%, #bddefd 100%);
-  border-radius: 0 0 16px 0;
+  border-radius: 41% 59% 39% 61% / 63% 29% 71% 37%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   margin: 12px auto;
   padding: 8px 0;
   list-style-type: none;
+  clip-path: polygon(0 0, 35% 0, 97% 0, 100% 50%, 97% 100%, 37% 100%, 0 100%);
 }
 .Crypto img {
   width: 50px;
   height: 50px;
+  margin: 5px 10px;
+}
+
+.fa-globe {
+  color: white;
+  font-size: 23px;
+}
+
+.fa-globe:hover {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.CryptoName {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.infos h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.infos h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-green {
+  color: #28a745;
+}
+
+.text-red {
+  color: #dc3545;
+}
+.mt-main {
+  margin-top: 120px;
+}
+
+#coin,
+#VarTime {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin: 12px auto;
+  padding: 8px 0;
+  border: none;
+}
+
+.configs {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.configs h3 {
+  font-size: 18px;
+  color: #ffffff;
+  display: inline;
+}
+
+.newsletter {
+  width: 90%;
+  margin: 0 auto;
+}
+
+section {
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    83% 100%,
+    50% 88%,
+    17% 100%,
+    0 100%,
+    0 38%,
+    0 0
+  );
+  background-color: #051338;
+  background-image: linear-gradient(160deg, #051338 0%, rgb(18, 70, 212) 100%);
+}
+
+.newsletter {
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 35px;
+}
+.newsletter h2,
+.newsletter i {
+  font-size: 18px;
+  display: inline;
+  color: #ffffff;
+  text-align: center;
+}
+
+.newsletter form {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 25px 0;
+}
+
+.newsletter label {
+  font-size: 16px;
+  color: #ffffff;
+}
+.newsletter input,
+.newsletter button {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 8px 0;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  max-width: 300px;
+  color: white;
+  text-align: center;
+}
+
+.newsletter input::placeholder {
+  font-weight: 600;
+  color: white;
+  padding-left: 10px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 678px) {
