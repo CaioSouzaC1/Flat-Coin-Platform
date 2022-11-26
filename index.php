@@ -23,9 +23,9 @@ require "header.php";
         <div class="menu row pointer">
 
             <ul>
-                <li>Top Cryptos</li>
-                <li>Newsletter</li>
-                <li>Top Cryptos</li>
+                <li><a href="#">Top Cryptos</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#authors">Authors</a></li>
             </ul>
             <i id="hamburguer" class="fa-solid fa-bars"></i>
         </div>
@@ -57,12 +57,12 @@ require "header.php";
         <div class="row ai-ce">
             <h3>Variation Time:</h3>
             <select id="VarTime">
-                <option value="1h">1h</option>
-                <option value="24h">24h</option>
-                <option value="7d">7d</option>
-                <option value="30d">30d</option>
-                <option value="60d">60d</option>
-                <option value="90d">90d</option>
+                <option value="h1">1h</option>
+                <option value="h24">24h</option>
+                <option value="d7">7d</option>
+                <option value="d30">30d</option>
+                <option value="d60">60d</option>
+                <option value="d90">90d</option>
             </select>
         </div>
         <div id="loader" class="lds-ring invisible">
@@ -92,15 +92,5 @@ require "header.php";
 <?php
 
 require "footer.php";
-
-function funcTest($funcParam)
-{
-    return  $funcParam;
-}
-
-if (isset($_POST['param'])) {
-    funcTest($_POST['param']);
-}
-
 
 ?>

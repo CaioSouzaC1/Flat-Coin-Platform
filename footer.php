@@ -1,4 +1,4 @@
-<footer>
+<footer id="authors">
     <div class="text-white row text-center">
         <h2>Study Project.</h2>
         <h3>Authors:</h3>

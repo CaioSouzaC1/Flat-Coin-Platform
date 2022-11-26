@@ -6,12 +6,16 @@ body {
   font-family: "Roboto Slab", serif;
   background-color: #010d18;
   background-image: linear-gradient(
-    135deg,
+    320deg,
     #010d18 0%,
-    #00182c 90%,
-    #001e38 100%
+    #002849 90%,
+    rgb(0, 42, 78) 100%
   );
   height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -61,14 +65,16 @@ header {
 .menu ul {
   display: flex;
 }
-.menu ul li {
+.menu ul li a {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
   color: #ffffff;
+  text-decoration: none;
+  text-align: center;
 }
 
-.menu ul li::after {
+.menu ul li a::after {
   content: "";
   color: #ffffff;
   height: 3px;
@@ -78,7 +84,7 @@ header {
   margin-top: 2px;
 }
 
-.menu ul li:hover::after {
+.menu ul li a:hover::after {
   content: "";
   color: #ffffff;
   border-radius: 0 0 40% 0;
@@ -350,6 +356,10 @@ section {
 .invisible {
   opacity: 0;
   transition: none;
+}
+
+.jc-se {
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 678px) {
