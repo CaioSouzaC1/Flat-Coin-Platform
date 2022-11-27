@@ -119,7 +119,6 @@ footer {
   );
   padding-top: 5%;
   padding-bottom: 5%;
-  margin-top: 2em;
 }
 footer h2,
 footer h3 {
@@ -164,7 +163,7 @@ footer a {
 
 .Crypto {
   width: 90%;
-  border-radius: 41% 59% 39% 61% / 63% 29% 71% 37%;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -174,11 +173,18 @@ footer a {
   padding: 8px 0;
   list-style-type: none;
   clip-path: polygon(0 0, 35% 0, 97% 0, 100% 50%, 97% 100%, 37% 100%, 0 100%);
+  cursor: pointer;
 }
 .Crypto img {
   width: 50px;
   height: 50px;
   margin: 5px 10px;
+}
+
+.Crypto:hover {
+  width: 98%;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .fa-globe {
@@ -301,6 +307,13 @@ section {
   text-align: center;
 }
 
+.newsletter button {
+  cursor: pointer;
+}
+.newsletter button:hover {
+  max-width: 350px;
+}
+
 .newsletter input::placeholder {
   font-weight: 600;
   color: white;
@@ -319,9 +332,8 @@ section {
 .lds-ring {
   display: inline-block;
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin-top: 15px;
+  width: 57px;
+  height: 57px;
 }
 .lds-ring div {
   box-sizing: border-box;
@@ -380,6 +392,54 @@ section {
 .fa-dollar-sign {
   margin: 0px 10px;
 }
+
+#NewsResponse {
+  display: flex;
+  min-height: 10em;
+  clip-path: polygon(
+    50% 0,
+    83% 20%,
+    100% 20%,
+    100% 100%,
+    83% 100%,
+    50% 80%,
+    17% 100%,
+    0 100%,
+    0 20%,
+    17% 20%
+  );
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#NewsResponse > div {
+  color: #ffffff;
+}
+
+#NewsResponse h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+#theModalContent span {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 5px 10px 0;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+#theModalContent h2 {
+  font-weight: bold;
+  font-size: 26px;
+}
+.jc-sa {
+  justify-content: space-around;
+}
 @media only screen and (max-width: 678px) {
   #hamburguer {
     display: block;
@@ -408,7 +468,7 @@ section {
     justify-content: space-around;
   }
 }
-@media only screen and (max-width: 345px) {
+@media only screen and (max-width: 385px) {
   .CryptoName {
     font-size: 20px;
   }

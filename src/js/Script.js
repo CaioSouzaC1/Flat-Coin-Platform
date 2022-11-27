@@ -66,11 +66,15 @@ const modalContent = document.querySelector("#theModalContent");
 
 function openModal(CryptoName, Category, lastUpdated, Desc, Logo) {
   modal.style.display = "block";
-  modalContent.innerHTML = `<div>${CryptoName}</div>
-  <img src="${Logo}"></img>
-  <div>${Category}</div>
-  <div>${Desc}</div>
-  <div>${lastUpdated}</div>
+  modalContent.innerHTML = `
+  <div class="row ai-ce jc-sa-xs">
+    <h2>${CryptoName}</h2>
+    <img style="margin-left:15px;" src="${Logo}">
+  </div>
+  <div class="mt-15 mb-15"><span>Category:</span>${Category}</div>
+
+  <div class="mt-15 mb-15"><span>Coin Description:</span>${Desc}</div>
+  <div class="mt-15 mb-15"><span>Updated At:</span>${lastUpdated}</div>
   `;
 }
 

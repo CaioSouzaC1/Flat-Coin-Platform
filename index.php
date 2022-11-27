@@ -84,14 +84,36 @@ require "header.php";
     <div class="newsletter">
         <h2>Every friday updates about the best cryptocurrencies in your inbox</h2>
         <i class="fa-regular fa-envelope"></i>
-        <form action="addnewsletter.php" method="POST">
+        <form action="AddNewsletter.php" method="POST">
             <label for="newsletterInput">Subscribe to our newsletter</label>
-            <input type="text" id="newsletterInput" placeholder="yourbest@email.com">
+            <input name="userEmail" type="email" required id="newsletterInput" placeholder="yourbest@email.com">
             <br>
             <button type="submit">Subscribe</button>
         </form>
     </div>
 </section>
+
+<?php
+if (isset($_GET['Newsletter']) && $_GET['Newsletter'] == 'Success') { ?>
+    <section id="NewsResponse">
+        <div class="main_container">
+            <h3>Success <i class="fa-solid fa-envelope-circle-check"></i></h3>
+            <p>Do not forget to check your spam folder.</p>
+        </div>
+    </section>
+<?php } ?>
+
+<?php
+if (isset($_GET['Newsletter']) && $_GET['Newsletter'] == 'Failure') { ?>
+    <section id="NewsResponse">
+        <div class="main_container">
+            <h3>Error <i class="fa-solid fa-triangle-exclamation"></i></h3>
+            <p>Please try again in a few moments.</p>
+        </div>
+    </section>
+<?php } ?>
+
+
 <?php
 
 require "footer.php";
