@@ -42,7 +42,7 @@ require "header.php";
 </div>
 <main class="main_container">
     <div class="configs row ai-ce">
-        <div class="row ai-ce col-6 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <div class="row ai-ce col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
             <h3>Select Coin:</h3>
             <select id="coin">
                 <?php
@@ -72,10 +72,13 @@ require "header.php";
             <div></div>
         </div>
     </div>
-    <div id="teste"></div>
+
+    <ul id="ulHeader">
+    </ul>
 
     <ul id="ulMain">
     </ul>
+
 </main>
 <section id="newsletter">
     <div class="newsletter">

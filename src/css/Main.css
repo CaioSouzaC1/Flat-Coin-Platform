@@ -356,12 +356,30 @@ section {
 .invisible {
   opacity: 0;
   transition: none;
+  display: none;
 }
 
 .jc-se {
   justify-content: space-evenly;
 }
 
+.text-14 {
+  font-size: 14px;
+}
+.italic {
+  font-style: italic;
+}
+.text-white {
+  color: white;
+}
+
+.thePercent svg {
+  margin: 0px 10px;
+}
+
+.fa-dollar-sign {
+  margin: 0px 10px;
+}
 @media only screen and (max-width: 678px) {
   #hamburguer {
     display: block;
@@ -379,5 +397,22 @@ section {
   }
   .menu ul li {
     margin: 15px 0;
+  }
+  #ulHeader {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .jc-sa-xs {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 345px) {
+  .CryptoName {
+    font-size: 20px;
+  }
+  .BinanceUSD .CryptoName {
+    font-size: 15px;
   }
 }

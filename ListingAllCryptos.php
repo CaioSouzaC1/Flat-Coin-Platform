@@ -50,7 +50,7 @@ function sendInfoToHome($convertCoin)
         'X-CMC_PRO_API_KEY: f569a48e-4b7a-4497-bda1-87005aeac4a3'
     ];
 
-    $cryptos = listCtyptosCmc(11, $headers);
+    $cryptos = listCtyptosCmc(15, $headers);
 
     $topCryptoIds = '';
     foreach ($cryptos->data as $cry) {
