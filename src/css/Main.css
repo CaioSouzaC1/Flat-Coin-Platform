@@ -440,6 +440,14 @@ section {
 .jc-sa {
   justify-content: space-around;
 }
+
+.h26 {
+  min-height: 26px;
+}
+
+.h60 {
+  min-height: 60px;
+}
 @media only screen and (max-width: 678px) {
   #hamburguer {
     display: block;

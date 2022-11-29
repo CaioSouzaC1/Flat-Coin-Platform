@@ -77,6 +77,19 @@ require "header.php";
     </ul>
 
     <ul id="ulMain">
+        <li class="Crypto h26"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
+        <li class="Crypto h60"></li>
     </ul>
 
 </main>

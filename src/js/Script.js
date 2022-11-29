@@ -97,6 +97,10 @@ const inicialList = async (params) => {
   document.querySelector("#loader").classList.remove("invisible");
   let myObj = await secondatyReqs(params);
   myObjRes = myObj;
+  document.querySelector(".h26").style.display = "none";
+  document.querySelectorAll(".h60").forEach((e) => {
+    e.style.display = "none";
+  });
   document.querySelector("#ulHeader").innerHTML = `        <li class="Crypto">
   <div class="row ai-ce">
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 row ai-ce infos">
