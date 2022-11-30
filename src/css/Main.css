@@ -469,6 +469,9 @@ section {
   #ulHeader {
     display: none;
   }
+  .h26 {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 576px) {
