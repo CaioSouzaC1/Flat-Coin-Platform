@@ -141,13 +141,16 @@ const inicialList = async (params) => {
                 </div>
                 <div class="row ai-ce col-5 col-sm-4 col-md-4 col-lg-4 col-xl-4 jc-sb jc-sa-xs">
                 <div>
-                  <a name="${element.CryptoName.replace(" ", "")}" href="${
+                  <a aria-label="${element.CryptoName.replace(
+                    " ",
+                    ""
+                  )}" name="${element.CryptoName.replace(" ", "")}" href="${
       element.Site
     }"><i class="fa-solid fa-globe"></i>
                   </a>
                 </div>
                 <div class="row">
-                    <h6>${element.Abrev}</h6>
+                    <p class="h6">${element.Abrev}</p>
                     </div>
                 </div>
             </div>
