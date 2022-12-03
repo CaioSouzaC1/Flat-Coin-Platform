@@ -12,3 +12,6 @@ See the price and statistics of many cryptocurrencies on our
 [Luan Sarti](https://github.com/LuanSarti) 
 
 ### Please, consider give us a star.
+
+See:
+http://flatcoin.rf.gd/
