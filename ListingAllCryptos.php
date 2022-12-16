@@ -9,7 +9,7 @@ require "SuperArray.php";
 //List all cryptos
 $headers = [
     'Accepts: application/json',
-    'X-CMC_PRO_API_KEY: f569a48e-4b7a-4497-bda1-87005aeac4a3'
+    'X-CMC_PRO_API_KEY: 8cf8663a-adcf-4af0-8656-318a71758cd8'
 ];
 
 function listCtyptosCmc($limit, $headers)
@@ -47,7 +47,7 @@ function sendInfoToHome($convertCoin)
 {
     $headers = [
         'Accepts: application/json',
-        'X-CMC_PRO_API_KEY: f569a48e-4b7a-4497-bda1-87005aeac4a3'
+        'X-CMC_PRO_API_KEY: 8cf8663a-adcf-4af0-8656-318a71758cd8'
     ];
 
     $cryptos = listCtyptosCmc(15, $headers);
